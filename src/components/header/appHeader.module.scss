@@ -1,0 +1,276 @@
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.AppHeader {
+    max-width: 100%;
+    width: 100%;
+    max-height: 70px;
+    height: 100%;
+    font-family: 'anw';
+    font-weight: 400;
+    position: fixed;
+    z-index: 3;
+    background-color: #242424;
+
+    &__Container {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__Logo {
+            display: flex;
+            align-items: center;
+
+            &__Link {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                text-decoration: none;
+
+                > img {
+                    width: 42px;
+                }
+
+                > span {
+                    font-size: 20px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+        }
+
+        &__Search {
+            display: flex;
+            align-items: center;
+
+            &__Label {
+                display: flex;
+                align-items: center;
+                width: 500px;
+                border: 1px solid #fff;
+                border-radius: 24px;
+                overflow-x: hidden;
+
+                &__InputField {
+                    width: 100%;
+                    background-color: transparent;
+                    padding: 5px 15px 5px;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                &__InputButton {
+                    width: 50px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px;
+                    background-color: transparent;
+                    border-left: 1px solid #fff;
+                }
+            }
+        }
+
+        &__Avatar {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+
+            &__Img {
+                width: 38px;
+            }
+
+            &__Menu {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(#fff, .3);
+                border-radius: 12px;
+                padding: 10px;
+                z-index: 10;
+
+                > a {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: #fff;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #fff;
+                }
+
+                &__ButtonOut {
+                    padding-top: 10px;
+                    border-radius: 12px;
+                    background-color: transparent;
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                }
+            }
+        }
+
+        &__EnterAccount {
+            display: flex;
+            align-items: center;
+
+            &__Link {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 10px 15px;
+                background-color: green;
+                border-radius: 12px;
+                text-decoration: none;
+
+                > p {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 860px) {
+    .AppHeader {
+        &__Container {
+            &__Logo {
+                &__Link {
+                    > span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 700px) {
+    .AppHeader {
+        &__Container {
+            gap: 10px;
+
+            &__Search {
+                &__Label {
+                    width: 300px;
+                }
+            }
+
+            &__Avatar {
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .AppHeader {
+        &__Container {
+            gap: 10px;
+
+            &__Search {
+                &__Label {
+                    width: 300px;
+                }
+            }
+
+            &__EnterAccount {
+                &__Link {
+                    > p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 430px) {
+    .AppHeader {
+        &__Container {
+            &__Search {
+                &__Label {
+                    width: 250px;
+                }
+            }
+
+            &__EnterAccount {
+                display: none;
+            }
+        }
+    }
+}

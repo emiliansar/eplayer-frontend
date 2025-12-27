@@ -1,0 +1,914 @@
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.ListenControl {
+    max-width: 100%;
+    width: 100%;
+    font-family: 'anw';
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__Wrapper {
+        width: 100%;
+        background-color: #1e1e1e;
+        border-radius: 100px;
+    }
+
+    &__Container {
+        max-width: 100%;
+        width: 100%;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__TimeSlider {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 4em);
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    &__Panel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &__Info {
+            width: auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            justify-self: flex-start;
+
+            &__Preview {
+                max-width: 75px;
+                min-width: 75px;
+                width: 100%;
+                max-height: 75px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100px;
+                overflow: hidden;
+                background-color: #000;
+
+                > img {
+                    position: relative;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            &__Text {
+                display: flex;
+                flex-direction: column;
+
+                > .AudioTitle {
+                    font-size: 16px;
+                    font-weight: 500;
+                    max-width: 200px;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                }
+
+                > .AudioAuthor {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: rgba(#fff, .3);
+                    max-width: 200px;
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                }
+            }
+
+            &__Menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__Btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    width: auto;
+                    padding: 5px 10px;
+                    border-radius: 24px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: rgba(#fff, .1);
+                    }
+                }
+            }
+        }
+
+        &__Mngmt {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-self: center;
+
+            &__Basic {
+                display: flex;
+                align-items: center;
+
+                &__PrevNext {
+                    background-color: transparent;
+                    width: 63px;
+                    height: 52px;
+                    cursor: pointer;
+                    border-radius: 12px;
+                    overflow: hidden;
+
+                    :hover {
+                        background-color: rgba(#fff, .1);
+                    }
+
+                    > img {
+                        width: 100%;
+                    }
+                }
+
+                &__PlayPause {
+                    width: 53px;
+                    height: 53px;
+                    background-color: transparent;
+                    cursor: pointer;
+                    border-radius: 24px;
+                    overflow: hidden;
+
+                    :hover {
+                        background-color: rgba(#fff, .1);
+                    }
+
+                    > img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__Volume {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+
+            &__Other {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__BtnReplay {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                    width: 50px;
+                    height: 50px;
+                    background-color: transparent;
+
+                    > img {
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        background-color: rgba(#fff, .1);
+                    }
+                }
+            }
+
+            &__Btn {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+                background-color: transparent;
+                border-radius: 100px;
+
+                &:hover {
+                    background-color: rgba(#fff, .1);
+                }
+
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.ListenOrderMini {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 520px;
+    width: 100%;
+
+    &__Container {
+        width: 100%;
+        padding: 0 0 10px;
+    }
+
+    &__Section {
+        background-color: #1e1e1e;
+        padding: 10px;
+        border-radius: 24px;
+    }
+
+    &__IsOpen {
+        width: 100%;
+
+        &__Btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background-color: #FF8C00;
+            background-color: #00FF1E;
+            cursor: pointer;
+            border-radius: 24px;
+
+            &:hover {
+                background-color: #21ff3b;
+            }
+
+            > span {
+                font-size: 18px;
+                font-weight: 500;
+                color: #2e2e2e;
+            }
+        }
+    }
+
+    &__Wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 10px;
+        // transition: height 2s ease 0.5s;
+
+        &__List {
+            width: 100%;
+            max-height: 500px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background-color: #2e2e2e;
+                border-radius: 4px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(#fff, .3);
+                border-radius: 4px;
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgba(#fff, .5);
+            }
+
+            &__Item {
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.ListenOrderMini__WrapperDisActive {
+    height: 0;
+    padding-top: 0;
+}
+
+.OrderMiniItem {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 5px;
+
+    &:hover {
+        background-color: rgba(#fff, .1);
+    }
+
+    &__Preview {
+        max-width: 75px;
+        min-width: 75px;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #000;
+        position: relative;
+
+        > img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        &__Active {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000, .7);
+            z-index: 3;
+
+            &__Circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 10px;
+                height: 10px;
+                background-color: #00FF1E;
+                border-radius: 100px;
+                animation: activeCircle .5s ease-in-out 0s infinite alternate forwards;
+            }
+        }
+    }
+
+    &__Text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        &__Title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: calc(380px - 20px);
+            width: 100%;
+        }
+
+        &__Author {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgba(#fff, .5);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: calc(380px - 20px);
+            width: 100%;
+        }
+    }
+}
+
+.Popover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > button {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #2e2e2e;
+
+        &:hover {
+            background-color: rgba(#fff, .1);
+        }
+
+        &:nth-child(-n + 1) {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        &:nth-last-child(-n + 1) {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+}
+
+@keyframes activeCircle {
+    0% {
+        width: 10px;
+        height: 10px;
+    } 100% {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .ListenControl {
+
+        &__Wrapper {
+        }
+
+        &__Container {
+        }
+
+        &__TimeSlider {
+        }
+
+        &__Panel {
+
+            &__Info {
+                gap: 5px;
+
+                &__Preview {
+                    max-width: 60px;
+                    min-width: 60px;
+                    max-height: 60px;
+
+                    > img {
+                    }
+                }
+
+                &__Text {
+
+                    > .AudioTitle {
+                        max-width: 120px;
+                    }
+
+                    > .AudioAuthor {
+                        max-width: 120px;
+                    }
+                }
+
+                &__Menu {
+
+                    &__Btn {
+                    }
+                }
+            }
+
+            &__Mngmt {
+
+                &__Basic {
+
+                    &__PrevNext {
+                        width: 44px;
+                        height: 36px;
+
+                        > img {
+                        }
+                    }
+
+                    &__PlayPause {
+                        width: 37px;
+                        height: 37px;
+
+                        > img {
+                        }
+                    }
+                }
+            }
+
+            &__Volume {
+                gap: 5px;
+
+                &__Other {
+
+                    &__BtnReplay {
+                        width: 40px;
+                        height: 40px;
+
+                        > img {
+                        }
+                    }
+                }
+
+                &__Btn {
+                    width: 40px;
+                    height: 40px;
+
+                    > img {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .ListenControl {
+
+        &__Wrapper {
+        }
+
+        &__Container {
+            padding: 10px 10px;
+        }
+
+        &__TimeSlider {
+        }
+
+        &__Panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__Info {
+                align-items: center;
+
+                &__Preview {
+
+                    > img {
+                    }
+                }
+
+                &__Text {
+
+                    > .AudioTitle {
+                    }
+
+                    > .AudioAuthor {
+                    }
+                }
+
+                &__Menu {
+
+                    &__Btn {
+                    }
+                }
+            }
+
+            &__Mngmt {
+
+                &__Basic {
+
+                    &__PrevNext {
+
+                        > img {
+                        }
+                    }
+
+                    &__PlayPause {
+
+                        > img {
+                        }
+                    }
+                }
+            }
+
+            &__Volume {
+                display: none;
+
+                &__Other {
+
+                    &__BtnReplay {
+
+                        > img {
+                        }
+                    }
+                }
+
+                &__Btn {
+
+                    > img {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .ListenControl {
+
+        &__Wrapper {
+        }
+
+        &__Container {
+            padding: 10px 10px;
+        }
+
+        &__TimeSlider {
+            width: calc(100% - 2.7em);
+        }
+
+        &__Panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__Info {
+
+                &__Preview {
+                    max-width: 40px;
+                    min-width: 40px;
+                    max-height: 40px;
+
+                    > img {
+                    }
+                }
+
+                &__Text {
+
+                    > .AudioTitle {
+                        max-width: 100px;
+                    }
+
+                    > .AudioAuthor {
+                        max-width: 100px;
+                    }
+                }
+
+                &__Menu {
+
+                    &__Btn {
+                        padding: 5px 5px;
+
+                        > img {
+                            width: 19px;
+                        }
+                    }
+                }
+            }
+
+            &__Mngmt {
+
+                &__Basic {
+
+                    &__PrevNext {
+
+                        > img {
+                        }
+                    }
+
+                    &__PlayPause {
+
+                        > img {
+                        }
+                    }
+                }
+            }
+
+            &__Volume {
+
+                &__Other {
+
+                    &__BtnReplay {
+
+                        > img {
+                        }
+                    }
+                }
+
+                &__Btn {
+
+                    > img {
+                    }
+                }
+            }
+        }
+    }
+
+    .ListenOrderMini {
+        &__IsOpen {
+            &__Btn {
+                > span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .OrderMiniItem {
+        &__Preview {
+            max-width: 60px;
+            min-width: 60px;
+            width: 100%;
+            height: 60px;
+        }
+
+        &__Text {
+            &__Title {
+                font-size: 14px;
+                max-width: 200px;
+            }
+
+            &__Author {
+                font-size: 16px;
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+@media(max-width: 360px) {
+    .ListenControl {
+
+        &__Wrapper {
+        }
+
+        &__Container {
+        }
+
+        &__TimeSlider {
+        }
+
+        &__Panel {
+
+            &__Info {
+
+                &__Preview {
+
+                    > img {
+                    }
+                }
+
+                &__Text {
+
+                    > .AudioTitle {
+                    }
+
+                    > .AudioAuthor {
+                    }
+                }
+
+                &__Menu {
+
+                    &__Btn {
+
+                        > img {
+                        }
+                    }
+                }
+            }
+
+            &__Mngmt {
+
+                &__Basic {
+
+                    &__PrevNext {
+                        width: 40px;
+                        height: 25px;
+
+                        > img {
+                            height: 100%;
+                        }
+                    }
+
+                    &__PlayPause {
+                        width: 26px;
+                        height: 26px;
+
+                        > img {
+                        }
+                    }
+                }
+            }
+
+            &__Volume {
+
+                &__Other {
+
+                    &__BtnReplay {
+
+                        > img {
+                        }
+                    }
+                }
+
+                &__Btn {
+
+                    > img {
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .OrderMiniItem {
+        .Preview {
+            max-width: 40px;
+            min-width: 40px;
+            height: 40px;
+        }
+
+        &__Text {
+            &__Title {
+                max-width: 150px;
+            }
+
+            &__Author {
+                max-width: 150px;
+            }
+        }
+    }
+}

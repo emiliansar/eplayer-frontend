@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.AppSider {
+    max-width: 250px;
+    width: 100%;
+    min-width: 50px;
+    background-color: #242424;
+    position: fixed;
+    z-index: 1;
+    font-family: 'anw', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    &__Container {
+        padding: 10px;
+
+        &__Title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        &__Nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+
+            &__Link {
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                position: relative;
+                padding: 5px;
+                border-radius: 12px;
+
+                > img {
+                    min-width: 50px;
+                }
+
+                > p {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    background-color: rgba(#fff, .1);
+                }
+            }
+        }
+    }
+
+    &__Avatar {
+            position: relative;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+
+            &__Img {
+                width: 38px;
+            }
+
+            &__Menu {
+                display: flex;
+                flex-direction: column;
+                background-color: #1e1e1e;
+                border-radius: 12px;
+                padding: 10px;
+                z-index: 20;
+
+                &__Settings {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: #fff;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #fff;
+                }
+
+                &__ButtonOut {
+                    padding-top: 10px;
+                    border-radius: 12px;
+                    background-color: transparent;
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+    }
+}
+
+@media(max-width: 960px) {
+    .AppSider {
+        max-width: 80px;
+
+        &__Container {
+
+            &__Nav {
+
+                &__Link {
+
+                    > p {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .AppSider {
+        max-width: 100%;
+        bottom: 0;
+        z-index: 3;
+        background-color: #1e1e1e;
+
+        &__Container {
+
+            &__Title {
+                display: none;
+            }
+
+            &__Nav {
+                flex-direction: row;
+
+                &__Link {
+                    justify-content: center;
+
+                    > img {
+                        max-width: 30px;
+                        min-width: 30px;
+                    }
+                }
+            }
+        }
+
+        &__Avatar {
+            display: flex;
+        }
+    }
+}
+
+@media(max-width: 860px) {
+    .AppSider {
+
+        &__Container {
+            padding: 5px;
+
+            &__Title {
+                font-size: 18px;
+            }
+
+            &__Nav {
+
+                &__Link {
+                    justify-content: center;
+
+                    > img {
+                        min-width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 640px) {
+    .AppSider {
+        max-width: 100%;
+        bottom: 0;
+
+        &__Container {
+
+            &__Title {
+                display: none;
+            }
+
+            &__Nav {
+                flex-direction: row;
+
+                &__Link {
+                    justify-content: center;
+
+                    > img {
+                        max-width: 30px;
+                        min-width: 30px;
+                    }
+                }
+            }
+        }
+
+        &__Avatar {
+            display: flex;
+        }
+    }
+}

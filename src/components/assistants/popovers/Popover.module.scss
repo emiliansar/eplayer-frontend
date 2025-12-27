@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../../assets/fonts/Avenir-Next-World-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.Popover {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    font-family: 'anw';
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > button {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #2e2e2e;
+
+        &:hover {
+            background-color: rgba(#fff, .1);
+        }
+
+        &:nth-child(-n + 1) {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        &:nth-last-child(-n + 1) {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+}

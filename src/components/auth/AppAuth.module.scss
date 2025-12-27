@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anw';
+    src: url('../../assets/fonts/Avenir-Next-World-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+.AppAuth {
+    max-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    position: relative;
+    color: #fff;
+    font-family: 'anw';
+
+    &__Auth {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 700px;
+        width: 100%;
+        max-height: 680px;
+        height: 100%;
+        font-size: 16px;
+        border: 2px solid #e1e1e1;
+        border-radius: 24px;
+
+        &__Container {
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__Title {
+                font-size: 64px;
+                font-weight: 600;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            &__Name {
+                max-width: 545px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                &__Input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: 2px solid #fff;
+                    border-radius: 12px;
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: #fff;
+                    padding: 10px;
+
+                    &::placeholder {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            &__Email {
+                max-width: 545px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                &__Input {
+                    width: 100%;
+                    background-color: transparent;
+                    border: 2px solid #fff;
+                    border-radius: 12px;
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: #fff;
+                    padding: 10px;
+
+                    &::placeholder {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            &__Password {
+                max-width: 545px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                &__Input {
+                    width: 100%;
+                    border: 2px solid #fff;
+                    border-radius: 12px;
+                    padding: 10px;
+                    background-color: transparent;
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: #fff;
+
+                    &::placeholder {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            &__Error {
+                padding-bottom: 30px;
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+
+                &__Text {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 100%;
+                    transform: translateX(-50%);
+                    color: rgba(255, 63, 63, .7);
+                    opacity: 1;
+                    // animation: alertError 1s ease-in 0s infinite alternate forwards;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+            &__Button {
+                margin: 100px 0 30px;
+                width: 100%;
+                align-items: center;
+                text-align: center;
+
+                &__Submit {
+                    max-width: 545px;
+                    width: 100%;
+                    padding: 20px 0;
+                    border-radius: 24px;
+                    color: #fff;
+                    font-size: 44px;
+                    font-weight: 700;
+                    background-color: rgba(#00FF1E, .55);
+                }
+            }
+
+            &__OtherLinks {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+
+                > span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    > a {
+                        display: flex;
+                        align-items: center;
+                        gap: 2px;
+                        font-size: 16px;
+                        background-color: transparent;
+                        color: rgba(#fff, .5);
+                        font-weight: 600;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: rgba(#fff, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__Register {
+        max-height: 750px;
+    }
+}
+
+@keyframes alertError {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media(max-width: 560px) {
+    .AppAuth {
+        &__Auth {
+            &__Container {
+                &__Title {
+                    font-size: 32px;
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+
+                &__Button {
+                    &__Submit {
+                        padding: 10px 0;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .AppAuth {
+        &__Auth {
+            &__Container {
+                &__OtherLinks {
+                    > span {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 750px) {
+    .AppAuth {
+        &__Auth {
+            &__Container {
+                &__Title {
+                    font-size: 32px;
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+
+                &__Name {
+                max-width: 545px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+
+                    &__Input {
+                        width: 100%;
+                        background-color: transparent;
+                        border: 2px solid #fff;
+                        border-radius: 12px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: #fff;
+                        padding: 5px;
+
+                        &::placeholder {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                &__Email {
+                    max-width: 545px;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    &__Input {
+                        width: 100%;
+                        background-color: transparent;
+                        border: 2px solid #fff;
+                        border-radius: 12px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: #fff;
+                        padding: 5px;
+
+                        &::placeholder {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                &__Password {
+                    max-width: 545px;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    &__Input {
+                        width: 100%;
+                        background-color: transparent;
+                        border: 2px solid #fff;
+                        border-radius: 12px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: #fff;
+                        padding: 5px;
+
+                            &::placeholder {
+                                font-size: 18px;
+                            }
+                    }
+                }
+
+                &__Button {
+                    &__Submit {
+                        padding: 10px 0;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 550px) {
+    .AppAuth {
+        &__Auth {
+            &__Container {
+                &__Button {
+                    margin-top: 50px;
+
+                    &__Submit {
+                        padding: 10px 0;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 500px) {
+    .AppAuth {
+        &__Auth {
+            &__Container {
+                &__Button {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+
+                    &__Submit {
+                        padding: 10px 0;
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-height: 450px) {
+    .AppAuth {
+        &__Register {
+            overflow-y: scroll;
+        }
+    }
+}
