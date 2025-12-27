@@ -18,7 +18,7 @@ import AuthorLayoutContext from './content/author/AuthorLayoutContext';
 import ContentSearch from './content/search/ContentSearch';
 import AuthSignin from './auth/AuthSignin';
 import AuthRegister from './auth/AuthRegister';
-import AppContent from './content/appnew/AppContent';
+import AppContent from './content/app/AppContent';
 
 export default function AppLayout() {
   return (
