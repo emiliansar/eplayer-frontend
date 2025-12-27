@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { useRef, useState } from "react"
 import { authService } from "../../services/auth.service"
 import { useEplayer } from "../../context/eplayer-context"
-import style from './appAuth.module.scss'
+import style from './AppAuth.module.scss'
 import { MoveRight } from 'lucide-react';
 import { Link, useNavigate, useOutletContext } from "react-router"
 import AuthEmail from "./components/AuthEmail"
