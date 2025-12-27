@@ -1,4 +1,4 @@
-import style from '../AppContent.module.scss'
+import style from '../appContent.module.scss'
 import arrowBackImg from '../../../../assets/images/arrowBack.svg'
 import arrowForwardImg from '../../../../assets/images/arrowForward.svg'
 
