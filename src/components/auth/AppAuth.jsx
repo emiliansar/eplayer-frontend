@@ -1,4 +1,4 @@
-import style from './appAuth.module.scss'
+import style from './AppAuth.module.scss'
 import { Outlet } from "react-router"
 import { message } from "antd"
 
