@@ -1,8 +1,8 @@
 import { Link } from "react-router"
-import { useEplayer } from "../../context/eplayer-context"
+import { useEplayer } from "@/context/eplayer-context"
 import style from './appSider.module.scss'
-import settingImg from '../../assets/images/settings.svg';
-import outAccount from '../../assets/images/outAccount.svg';
+// import settingImg from '../../assets/images/settings.svg';
+// import outAccount from '../../assets/images/outAccount.svg';
 
 export default function SiderMenu() {
     const { isAuth } = useEplayer()
@@ -16,7 +16,7 @@ export default function SiderMenu() {
                             to={"/settings"}
                             className={style.AppSider__Avatar__Menu__Settings}
                         >
-                            <img src={settingImg} alt="Настройки" />
+                            <img src='/assets/images/settings.svg' alt="Настройки" />
                             <span>Настройки</span>
                         </Link>
                         <button
@@ -24,7 +24,7 @@ export default function SiderMenu() {
                             className={style.AppSider__Avatar__Menu__ButtonOut}
                             onClick={() => exitAcc()}
                         >
-                            <img src={outAccount} alt="Выход" />
+                            <img src='/assets/images/outAccount.svg' alt="Выход" />
                                 <span>Выход</span>
                         </button>
                     </>
@@ -34,14 +34,14 @@ export default function SiderMenu() {
                             to={"/settings"}
                             className={style.AppSider__Avatar__Menu__Settings}
                         >
-                            <img src={settingImg} alt="Настройки" />
+                            <img src='/assets/images/settings.svg' alt="Настройки" />
                             <span>Настройки</span>
                         </Link>
                         <Link
                             className={style.AppSider__Avatar__Menu__ButtonOut}
                             to={"/auth"}
                         >
-                            <img src={outAccount} alt="Выход" />
+                            <img src='/assets/images/outAccount.svg' alt="Выход" />
                             <span>Вход</span>
                         </Link>
                     </>

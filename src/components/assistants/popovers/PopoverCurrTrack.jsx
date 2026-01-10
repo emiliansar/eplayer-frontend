@@ -1,19 +1,18 @@
-import download from '../../../assets/images/download.svg'
-import playlistAdd from '../../../assets/images/playlistAdd.svg'
-import artist from '../../../assets/images/artist.svg'
-import addToOrder from '../../../assets/images/addToOrder.svg'
-import moreHoriz from '../../../assets/images/moreHoriz.svg'
+// import download from '../../../assets/images/download.svg'
+// import playlistAdd from '../../../assets/images/playlistAdd.svg'
+// import artist from '../../../assets/images/artist.svg'
+// import addToOrder from '../../../assets/images/addToOrder.svg'
+// import moreHoriz from '../../../assets/images/moreHoriz.svg'
 import style from './Popover.module.scss'
-import { useMusic } from '../../../context/music-context'
-import { ConfigProvider, Modal } from 'antd'
+import { useMusic } from '@/context/music-context'
+import { Modal } from 'antd'
 import { useEffect, useState } from 'react'
-import ListOfPlaylists from '../list_of_playlists/ListOfPlaylists'
 import { useNavigate } from 'react-router'
 import { message } from 'antd';
-import doubleArrow from '../../../assets/images/doubleArrow-ReplayOff.svg'
-import repeat from '../../../assets/images/repeat-ReplayPlaylist.svg'
-import repeatOne from '../../../assets/images/repeatOne-ReplayOne.svg'
-import repeatOneOn from '../../../assets/images/repeatOneOn-EndAfterCurrent.svg'
+// import doubleArrow from '../../../assets/images/doubleArrow-ReplayOff.svg'
+// import repeat from '../../../assets/images/repeat-ReplayPlaylist.svg'
+// import repeatOne from '../../../assets/images/repeatOne-ReplayOne.svg'
+// import repeatOneOn from '../../../assets/images/repeatOneOn-EndAfterCurrent.svg'
 import PlaylistsModal from '../list_of_playlists/PlaylistsModal'
 
 export default function PopoverCurrTrack() {
@@ -117,10 +116,10 @@ export default function PopoverCurrTrack() {
                 onClick={changeReplay}
                 className={style.Popover__BtnReplay}
             >
-                {replay === 'off' && (<img src={doubleArrow} alt="Повтор" />)}
-                {replay === 'replay-playlist' && (<img src={repeat} alt="Повтор" />)}
-                {replay === 'replay-one' && (<img src={repeatOne} alt="Повтор" />)}
-                {replay === 'end-after-one' && (<img src={repeatOneOn} alt="Повтор" />)}
+                {replay === 'off' && (<img src='/assets/images/doubleArrow-ReplayOff.svg' alt="Повтор" />)}
+                {replay === 'replay-playlist' && (<img src='/assets/images/repeat-ReplayPlaylist.svg' alt="Повтор" />)}
+                {replay === 'replay-one' && (<img src='/assets/images/repeatOne-ReplayOne.svg' alt="Повтор" />)}
+                {replay === 'end-after-one' && (<img src='/assets/images/repeatOneOn-EndAfterCurrent.svg' alt="Повтор" />)}
                 <span>
                     { replay === 'off' && "Выкл" }
                     { replay === 'replay-playlist' && "Плейлист" }
@@ -133,28 +132,28 @@ export default function PopoverCurrTrack() {
                 onClick={downloadAudioFile}
                 className={style.Popover__BtnDownload}
             >
-                <img src={download} />
+                <img src='/assets/images/download.svg' />
                 <span>Скачать</span>
             </button>
             <button
                 onClick={showModal}
                 className={style.Popover__AddToPlaylist}
             >
-                <img src={playlistAdd} />
+                <img src='/assets/images/playlistAdd.svg' />
                 <span>Добавить в плейлист</span>
             </button>
             <button
                 onClick={handleAuthor}
                 className={style.Popover__toAuthor}
             >
-                <img src={artist} />
+                <img src='/assets/images/artist.svg' />
                 <span>Перейти к исполнителю</span>
             </button>
             <button
                 onClick={addToOrderPlayback}
                 className={style.Popover__AddToOrderPlayback}
             >
-                <img src={addToOrder} />
+                <img src='/assets/images/addToOrder.svg' />
                 <span>Добавить в очередь</span>
             </button>
 

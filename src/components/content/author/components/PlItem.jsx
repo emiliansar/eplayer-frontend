@@ -1,6 +1,6 @@
 // PlayListItem.jsx
 import { Link } from 'react-router'
-import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
+// import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
 import style from '../ContentAuthor.module.scss'
 
 export default function PlItem({ item }) {
@@ -14,7 +14,7 @@ export default function PlItem({ item }) {
             >
                 <div className={style.PlItem__Preview}>
                     <img
-                        src={ playlistDefaultPreviewImg }
+                        src='/assets/images/playlistDefaultPreview.jpeg'
                         alt="Превью"
                         style={{
                             width: 200,

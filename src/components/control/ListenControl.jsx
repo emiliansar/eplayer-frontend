@@ -1,26 +1,26 @@
 import { ConfigProvider, Popover, Slider } from 'antd'
 import style from './control.module.scss'
-import arrowPrev from '../../assets/images/arrowPrev.svg'
-import arrowNext from '../../assets/images/arrowNext.svg'
-import doubleArrow from '../../assets/images/doubleArrow-ReplayOff.svg'
-import repeat from '../../assets/images/repeat-ReplayPlaylist.svg'
-import repeatOne from '../../assets/images/repeatOne-ReplayOne.svg'
-import repeatOneOn from '../../assets/images/repeatOneOn-EndAfterCurrent.svg'
-import playBtn from '../../assets/images/PlayBtn.svg'
-import pauseBtn from '../../assets/images/PauseBtn.svg'
+// import arrowPrev from '../../assets/images/arrowPrev.svg'
+// import arrowNext from '../../assets/images/arrowNext.svg'
+// import doubleArrow from '../../assets/images/doubleArrow-ReplayOff.svg'
+// import repeat from '../../assets/images/repeat-ReplayPlaylist.svg'
+// import repeatOne from '../../assets/images/repeatOne-ReplayOne.svg'
+// import repeatOneOn from '../../assets/images/repeatOneOn-EndAfterCurrent.svg'
+// import playBtn from '../../assets/images/PlayBtn.svg'
+// import pauseBtn from '../../assets/images/PauseBtn.svg'
 import { useNavigate } from 'react-router'
 import { useCallback, useEffect } from 'react'
 import ListenOrderMini from './components/ListenOrderMini'
-import audioDefaultpreview from '../../assets/images/audioDefaultpreview.jpeg'
+// import audioDefaultpreview from '../../assets/images/audioDefaultpreview.jpeg'
 import { useQuery } from '@tanstack/react-query'
-import moreHoriz from '../../assets/images/moreHoriz.svg'
-import volumeImg from '../../assets/images/volume.svg'
-import volumeOffImg from '../../assets/images/volumeOff.svg'
-import ControlPopover from './components/ControlPopover'
-import { useMusic } from '../../context/music-context'
-import { authorService } from '../../services/author.service'
+// import moreHoriz from '../../assets/images/moreHoriz.svg'
+// import volumeImg from '../../assets/images/volume.svg'
+// import volumeOffImg from '../../assets/images/volumeOff.svg'
+// import ControlPopover from './components/ControlPopover'
+import { useMusic } from '@/context/music-context'
+import { authorService } from '@/services/author.service'
 import { volumeSliderTokens } from './settings/sliderTokens'
-import PopoverCurrTrack from '../assistants/popovers/PopoverCurrTrack'
+import PopoverCurrTrack from '@/components/assistants/popovers/PopoverCurrTrack'
 
 export default function ListenControl() {
     const {
@@ -258,7 +258,7 @@ export default function ListenControl() {
                             <div className={style.ListenControl__Panel__Info__Preview}>
                                 <img
                                     src={currentTrack.preview ? `/api/images/${currentTrack.preview}`
-                                                                 : audioDefaultpreview
+                                                                 : '/assets/images/audioDefaultpreview.jpeg'
                                     }
                                 />
                             </div>
@@ -281,7 +281,7 @@ export default function ListenControl() {
                                     <button
                                         className={style.ListenControl__Panel__Info__Menu__Btn}
                                     >
-                                        <img src={moreHoriz} />
+                                        <img src='/assets/images/moreHoriz.svg' />
                                     </button>
                                 </Popover>
                             </div>
@@ -292,21 +292,21 @@ export default function ListenControl() {
                                     onClick={handlePrevItem}
                                     className={style.ListenControl__Panel__Mngmt__Basic__PrevNext}
                                 >
-                                    <img src={arrowPrev} />
+                                    <img src='/assets/images/arrowPrev.svg' />
                                 </button>
                                 <button
                                     onClick={handlePlayPause}
                                     className={style.ListenControl__Panel__Mngmt__Basic__PlayPause}
                                 >
                                     <img src={
-                                        isPlaying ? pauseBtn : playBtn
+                                        isPlaying ? '/assets/images/PauseBtn.svg' : '/assets/images/PlayBtn.svg'
                                     } />
                                 </button>
                                 <button
                                     onClick={handleNextItem}
                                     className={style.ListenControl__Panel__Mngmt__Basic__PrevNext}
                                 >
-                                    <img src={arrowNext} />
+                                    <img src='/assets/images/arrowNext.svg' />
                                 </button>
                             </div>
                         </div>
@@ -317,10 +317,10 @@ export default function ListenControl() {
                                         onClick={changeReplay}
                                         className={style.ListenControl__Panel__Volume__Other__BtnReplay}
                                     >
-                                        {replay === 'off' && (<img src={doubleArrow} alt="Повтор" />)}
-                                        {replay === 'replay-playlist' && (<img src={repeat} alt="Повтор" />)}
-                                        {replay === 'replay-one' && (<img src={repeatOne} alt="Повтор" />)}
-                                        {replay === 'end-after-one' && (<img src={repeatOneOn} alt="Повтор" />)}
+                                        {replay === 'off' && (<img src='/assets/images/doubleArrow-ReplayOff.svg' alt="Повтор" />)}
+                                        {replay === 'replay-playlist' && (<img src='/assets/images/repeat-ReplayPlaylist.svg' alt="Повтор" />)}
+                                        {replay === 'replay-one' && (<img src='/assets/images/repeatOne-ReplayOne.svg' alt="Повтор" />)}
+                                        {replay === 'end-after-one' && (<img src='/assets/images/repeatOneOn-EndAfterCurrent.svg' alt="Повтор" />)}
                                     </button>
                                 </div>
                                 <Popover
@@ -332,7 +332,7 @@ export default function ListenControl() {
                                         onClick={handleVolume}
                                         className={style.ListenControl__Panel__Volume__Btn}
                                     >
-                                        <img src={volume ? volumeImg : volumeOffImg} />
+                                        <img src={volume ? '/assets/images/volume.svg' : '/assets/images/volumeOff.svg'} />
                                     </button>
                                 </Popover>
                             </div>
@@ -341,72 +341,5 @@ export default function ListenControl() {
                 </div>
             </div>
         </div>
-
-        // <div className={style.Layout__Sub__Outlet__ListenControl}>
-        //     <ListenOrderMini />
-        //     <div className={style.ListenControl}>
-        //         <div className={style.ListenControl__Container}>
-        //             <div className={style.ListenControl__Wrapper}>
-        //                 <div className={style.ListenControl__PlayTime}>
-        //                     <span className={style.ListenControl__PlayTime__Info}>
-        //                         {formatterTime(currentTime)}
-        //                     </span>
-        //                     <div className={style.ListenControl__PlayTime__Slider}>
-        //                         <Slider
-        //                             min={0}
-        //                             max={duration}
-        //                             defaultValue={0}
-        //                             value={typeof currentTime === 'number' ? currentTime : 0}
-        //                             onChange={handleSeek}
-        //                             // onChange={handleSliderChange}
-        //                             // onChangeComplete={handleSliderAfterChange}
-        //                             disabled={!duration}
-        //                             tooltip={{
-        //                                 formatter: (currentTime) => formatterTime(currentTime)
-        //                             }}
-        //                         />
-        //                     </div>
-        //                     <span className={style.ListenControl__PlayTime__Info}>
-        //                         {formatterTime(duration)}
-        //                     </span>
-        //                 </div>
-        //                 <div className={style.ListenControl__PlayButtons}>
-        //                     <button
-        //                         // disabled={prevItem}
-        //                         onClick={handlePrevItem}
-        //                         className={style.ListenControl__PlayButtons__PrevNext}
-        //                     >
-        //                         <img src={arrowPrev} />
-        //                     </button>
-        //                     <button
-        //                         onClick={handlePlayPause}
-        //                         className={style.ListenControl__PlayButtons__PlayPause}
-        //                     >
-        //                         <img src={
-        //                             isPlaying ? playBtn : pauseBtn
-        //                         } />
-        //                     </button>
-        //                     <button
-        //                         // disabled={nextItem}
-        //                         onClick={handleNextItem}
-        //                         className={style.ListenControl__PlayButtons__PrevNext}
-        //                     >
-        //                         <img src={arrowNext} />
-        //                     </button>
-
-        //                     <button
-        //                         onClick={changeReplay}
-        //                         className={style.ListenMusicInfo__Content__Management__Menu__BtnReplay}
-        //                     >
-        //                         {replay === 'off' && (<img src={doubleArrow} alt="Повтор" />)}
-        //                         {replay === 'replay-playlist' && (<img src={repeat} alt="Повтор" />)}
-        //                         {replay === 'replay-one' && (<img src={repeatOne} alt="Повтор" />)}
-        //                         {replay === 'end-after-one' && (<img src={repeatOneOn} alt="Повтор" />)}
-        //                     </button>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }

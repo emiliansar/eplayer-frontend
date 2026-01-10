@@ -1,11 +1,10 @@
-import { useQuery } from "@tanstack/react-query"
 import { useEffect, useState } from "react"
-import { authorService } from "../../../services/author.service"
+// import { authorService } from "../../../services/author.service"
 import { Link, Outlet, useLocation, useSearchParams } from "react-router"
 import style from './ContentAuthor.module.scss'
-import userDefaultAvatarImg from '../../../assets/images/userDefaultAvatar.svg'
+// import userDefaultAvatarImg from '../../../assets/images/userDefaultAvatar.svg'
 import AuthorInfo from "./components/AuthorInfo"
-import { useAuthor } from "../../../context/author-context"
+import { useAuthor } from "@/context/author-context"
 
 export default function AuthorLayout() {
     const [searchParams, setSearchParams] = useSearchParams()

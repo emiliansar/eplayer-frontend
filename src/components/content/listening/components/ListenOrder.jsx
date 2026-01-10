@@ -1,9 +1,9 @@
-import { useMusic } from "../../../../context/music-context"
+import { useMusic } from "@/context/music-context"
 import style from '../ContentListening.module.scss'
-import { authorService } from "../../../../services/author.service"
-import { useEffect, useState } from "react"
+// import { authorService } from "../../../../services/author.service"
+// import { useEffect, useState } from "react"
 import OrderItem from "./OrderItem"
-import deleteImg from '../../../../assets/images/delete.svg'
+// import deleteImg from '../../../../assets/images/delete.svg'
 
 export default function ListenOrder() {
     const { playlist, currentPlaylistId, delOrderPlayback } = useMusic()
@@ -29,7 +29,7 @@ export default function ListenOrder() {
                             <span>
                                 Очистить
                             </span>
-                            <img src={deleteImg} />
+                            <img src='/assets/images/delete.svg' />
                         </button>
                     ) }
                 </div>

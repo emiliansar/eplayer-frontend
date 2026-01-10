@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import { useAuthor } from "../../../../context/author-context"
+import { useAuthor } from "@/context/author-context"
 import { useQuery } from "@tanstack/react-query"
-import { authorService } from "../../../../services/author.service"
+import { authorService } from "@/services/author.service"
 import PlItem from "./PlItem"
 import style from '../ContentAuthor.module.scss'
 import PlNotFound from "./PlNotFound"

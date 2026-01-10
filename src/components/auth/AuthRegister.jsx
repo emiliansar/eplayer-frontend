@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { useRef, useState } from "react"
-import { authService } from "../../services/auth.service"
+import { authService } from "@/services/auth.service"
 import style from './AppAuth.module.scss'
 import { MoveRight } from "lucide-react"
 import { Link, useNavigate, useOutletContext } from "react-router"
@@ -52,7 +52,10 @@ export default function AuthRegister() {
                     Регистрация
                 </p>
                 <AuthName stateDefaultName={stateDefaultName} nameRef={nameRef} />
-                <AuthEmail emailRef={emailRef} defaultName={defaultName} />
+                <AuthEmail
+                    emailRef={emailRef}
+                    defaultName={defaultName}
+                />
                 <AuthPass passwordRef={passwordRef} />
                 <AuthError errorValue={errorValue} />
                 <AuthBtnReg

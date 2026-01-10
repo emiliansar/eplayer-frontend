@@ -1,6 +1,6 @@
-import { useMusic } from '../../../../../context/music-context'
+import { useMusic } from '@/context/music-context'
 import style from '../../ContentListening.module.scss'
-import audioDefaultpreviewImg from '../../../../../assets/images/audioDefaultpreview.jpeg'
+// import audioDefaultpreviewImg from '../../../../../assets/images/audioDefaultpreview.jpeg'
 
 export default function InfoPreview() {
     const { currentTrack } = useMusic()
@@ -9,7 +9,7 @@ export default function InfoPreview() {
         <div className={style.ListenMusicInfo__Content__Preview}>
             <img
                 className={style.ListenMusicInfo__Content__Preview__Img}
-                src={ currentTrack?.preview ? `/api/images/${currentTrack.preview}` : audioDefaultpreviewImg}
+                src={ currentTrack?.preview ? `/api/images/${currentTrack.preview}` : '/assets/images/audioDefaultpreview.jpeg'}
                 alt="Обложка"
             />
         </div>

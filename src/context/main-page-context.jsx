@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
-import { musicService } from "../services/music.service";
+import { musicService } from "@/services/music.service";
 
 const MainPageContext = createContext()
 

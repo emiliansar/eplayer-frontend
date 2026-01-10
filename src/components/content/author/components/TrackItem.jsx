@@ -1,5 +1,5 @@
 import style from '../ContentAuthor.module.scss'
-import audioDefaultpreview from '../../../../assets/images/audioDefaultpreview.jpeg'
+// import audioDefaultpreview from '../../../../assets/images/audioDefaultpreview.jpeg'
 import { Link } from 'react-router'
 
 export default function TrackItem({ item }) {
@@ -14,7 +14,7 @@ export default function TrackItem({ item }) {
                 <div className={style.TrackItem__Preview}>
                     <img
                         src={
-                            item.preview ? `/api/images/${item.preview}` : audioDefaultpreview
+                            item.preview ? `/api/images/${item.preview}` : '/assets/images/audioDefaultpreview.jpeg'
                         }
                         alt="Превью"
                     />

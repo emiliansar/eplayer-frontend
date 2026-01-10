@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react'
+// import { useRef, useState } from 'react'
 import style from '../contentFormUploads.module.scss'
-import uploadImageImg from '../../../../assets/images/uploadImage.svg'
+// import uploadImageImg from '../../../../assets/images/uploadImage.svg'
 
 export default function UploadsPreview({
     imageInputRef,
@@ -79,7 +79,7 @@ export default function UploadsPreview({
                             onClick={() => imageInputRef?.current.click()}
                         >
                             <span>Загрузить изображение</span>
-                            <img src={uploadImageImg} alt="Изображение" />
+                            <img src='/assets/images/uploadImage.svg' alt="Изображение" />
                         </button>
                     )}
                 </div>

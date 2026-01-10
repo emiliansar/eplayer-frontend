@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import AppLayout from './components/AppLayout'
 import { Provider } from './Provider'
-import { EplayerContextProvider } from './context/eplayer-context'
-import { MusicContextProvider } from './context/music-context'
+import { EplayerContextProvider } from '@/context/eplayer-context'
+import { MusicContextProvider } from '@/context/music-context'
 import { ConfigProvider } from 'antd'
 
 export default function App() {

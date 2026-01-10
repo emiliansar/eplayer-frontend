@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
-import { useEplayer } from "../../../context/eplayer-context"
-import PleaseAuth from "../../errors/PleaseAuth"
-import { userService } from "../../../services/user.service"
+import { useEplayer } from "@/context/eplayer-context"
+import PleaseAuth from "@/components/errors/PleaseAuth"
+import { userService } from "@/services/user.service"
 import style from './contentPlaylists.module.scss'
 import PlaylistLoading from "./components/PlaylistsLoading"
 import PlaylistsError from "./components/PlaylistsError"

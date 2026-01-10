@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import style from './CreatePlaylist.module.scss'
 import { message, Switch } from "antd"
 import { useMutation } from "@tanstack/react-query"
-import { useEplayer } from "../../../context/eplayer-context"
-import { userService } from "../../../services/user.service"
+// import { useEplayer } from "../../../context/eplayer-context"
+// import { userService } from "../../../services/user.service"
+import { useEplayer } from '@/context/eplayer-context'
+import { userService } from '@/services/user.service'
 import FormName from "./components/FormName"
 import FormDesc from "./components/FormDesc"
 import FormAccess from "./components/FormAccess"

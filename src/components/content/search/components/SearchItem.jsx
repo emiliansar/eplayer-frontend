@@ -1,14 +1,14 @@
 import { Link } from 'react-router'
 import style from '../ContentSearch.module.scss'
-import audioDefaultpreviewImg from '../../../../assets/images/audioDefaultpreview.jpeg'
-import moreHorizImg from '../../../../assets/images/moreHoriz.svg'
+// import audioDefaultpreviewImg from '../../../../assets/images/audioDefaultpreview.jpeg'
+// import moreHorizImg from '../../../../assets/images/moreHoriz.svg'
 import { useQuery } from '@tanstack/react-query'
-import { authorService } from '../../../../services/author.service'
+import { authorService } from '@/services/author.service'
 import { useEffect } from 'react'
 import { Popover } from 'antd';
-import PopoverCurrTrack from '../../../assistants/popovers/PopoverCurrTrack';
-import PopoverMusic from '../../../assistants/popovers/PopoverMusic'
-import { useMusic } from '../../../../context/music-context'
+// import PopoverCurrTrack from '../../../assistants/popovers/PopoverCurrTrack';
+import PopoverMusic from '@/components/assistants/popovers/PopoverMusic'
+import { useMusic } from '@/context/music-context'
 
 export default function SearchItem({ result }) {
 
@@ -47,7 +47,7 @@ export default function SearchItem({ result }) {
                     style={{
                         width: 100
                     }}
-                        src={result.preview ? `/api/images/${result.preview}` : audioDefaultpreviewImg}
+                        src={result.preview ? `/api/images/${result.preview}` : '/assets/images/audioDefaultpreview.jpeg'}
                         alt="Абложка"
                     />
                     <div
@@ -83,7 +83,7 @@ export default function SearchItem({ result }) {
                     <button
                         className={style.SearchItem__Action__Btn}
                     >
-                        <img src={moreHorizImg} />
+                        <img src='/assets/images/moreHoriz.svg' />
                     </button>
                 </Popover>
             </div>

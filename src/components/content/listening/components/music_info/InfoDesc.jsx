@@ -1,4 +1,4 @@
-import { useMusic } from "../../../../../context/music-context"
+import { useMusic } from "@/context/music-context"
 import style from '../../ContentListening.module.scss'
 
 export default function InfoDesc() {

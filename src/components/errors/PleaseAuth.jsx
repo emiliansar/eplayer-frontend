@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import openLink from "../../assets/images/openLink.svg";
 import style from './pleaseAuth.module.scss'
 
 export default function PleaseAuth() {
@@ -12,7 +11,7 @@ export default function PleaseAuth() {
                     className={style.PleaseAuth__Link}
                 >
                     <span>Авторизоваться</span>
-                    <img src={openLink} alt="Ссылка" />
+                    <img src='assets/images/openLink.svg' alt="Ссылка" />
                 </Link>
             </div>
         </>

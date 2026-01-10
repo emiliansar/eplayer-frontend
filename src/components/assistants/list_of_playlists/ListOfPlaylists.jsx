@@ -1,10 +1,14 @@
-import { useEplayer } from "../../../context/eplayer-context";
+// import { useEplayer } from "../../../context/eplayer-context";
+import { useEplayer } from '@/context/eplayer-context'
 import style from './ListOfPlaylists.module.scss'
 import { useMutation } from "@tanstack/react-query";
-import { userService } from "../../../services/user.service";
-import { useMusic } from "../../../context/music-context";
+// import { userService } from "../../../services/user.service";
+import { userService } from "@/services/user.service";
+// import { useMusic } from "../../../context/music-context";
+import { useMusic } from "@/context/music-context";
 import { message } from 'antd';
-import PleaseAuth from "../../errors/PleaseAuth";
+// import PleaseAuth from "../../errors/PleaseAuth";
+import PleaseAuth from "@/components/errors/PleaseAuth";
 import PlaylistBtnCreate from "./components/PlaylistBtnCreate";
 import PlaylistsItem from "./components/PlaylistsItem";
 import { useState } from "react";

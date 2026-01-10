@@ -1,14 +1,14 @@
 import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import style from './appHeader.module.scss';
-import logo from '../../assets/images/logo.svg';
-import searchButton from '../../assets/images/searchButton.svg';
-import userDefaultAvatar from '../../assets/images/userDefaultAvatar.svg';
-import settingImg from '../../assets/images/settings.svg';
-import outAccount from '../../assets/images/outAccount.svg';
-import enterAccount from '../../assets/images/enterAccount.svg'
-import { useEplayer } from "../../context/eplayer-context";
+// import logo from '../../assets/images/logo.svg';
+// import searchButton from '../../assets/images/searchButton.svg';
+// import userDefaultAvatar from '../../assets/images/userDefaultAvatar.svg';
+// import settingImg from '../../assets/images/settings.svg';
+// import outAccount from '../../assets/images/outAccount.svg';
+// import enterAccount from '../../assets/images/enterAccount.svg'
+import { useEplayer } from "@/context/eplayer-context";
 import { useQuery } from "@tanstack/react-query";
-import { authService } from "../../services/auth.service";
+import { authService } from "@/services/auth.service";
 import { useEffect, useRef, useState } from "react";
 
 export default function AppHeader() {
@@ -75,7 +75,7 @@ export default function AppHeader() {
                             to={"/"}
                             className={style.AppHeader__Container__Logo__Link}
                         >
-                            <img src={logo} alt="Лого" />
+                            <img src='/assets/images/logo.svg' alt="Лого" />
                             <span>Эмиль Плейер</span>
                         </Link>
                     </div>
@@ -95,7 +95,7 @@ export default function AppHeader() {
                                 onClick={handleSearch}
                                 className={style.AppHeader__Container__Search__Label__InputButton}
                             >
-                                <img src={searchButton} alt="Поиск" />
+                                <img src='/assets/images/searchButton.svg' alt="Поиск" />
                             </button>
                         </label>
                     </div>
@@ -103,7 +103,7 @@ export default function AppHeader() {
                     { isAuth ? (
                         <div className={style.AppHeader__Container__Avatar}>
                             <img src={
-                                    userDefaultAvatar || data.avatar
+                                    data.avatar || '/assets/images/userDefaultAvatar.svg'
                                 }
                                 alt="Аватарка"
                                 className={style.AppHeader__Container__Avatar__Img}
@@ -113,7 +113,7 @@ export default function AppHeader() {
                             { isAvatarMenu && (
                                 <div className={style.AppHeader__Container__Avatar__Menu}>
                                     <Link to={"/settings"}>
-                                        <img src={settingImg} alt="Настройки" />
+                                        <img src='/assets/images/settings.svg' alt="Настройки" />
                                         <span>Настройки</span>
                                     </Link>
                                     <button
@@ -121,7 +121,7 @@ export default function AppHeader() {
                                         className={style.AppHeader__Container__Avatar__Menu__ButtonOut}
                                         onClick={() => exitAcc()}
                                     >
-                                        <img src={outAccount} alt="Выход" />
+                                        <img src='/assets/images/outAccount.svg' alt="Выход" />
                                         <span>Выход</span>
                                     </button>
                                 </div>
@@ -133,7 +133,7 @@ export default function AppHeader() {
                                 to={"/auth"}
                                 className={style.AppHeader__Container__EnterAccount__Link}
                             >
-                                <img src={enterAccount} alt="Вход" />
+                                <img src='/assets/images/enterAccount.svg' alt="Вход" />
                                 <p>Войти</p>
                             </Link>
                         </div>

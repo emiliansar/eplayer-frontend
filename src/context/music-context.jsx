@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { musicService } from "../services/music.service";
-import { useEplayer } from "./eplayer-context";
+import { musicService } from "@/services/music.service";
+import { useEplayer } from "@/context/eplayer-context";
 
 const MusicContext = createContext()
 
@@ -288,7 +288,6 @@ export const MusicContextProvider = ({ children }) => {
         speed,
         changeSpeed,
         replay,
-        changeReplay: setReplay,
         play,
         pause,
         handlePlayPause,

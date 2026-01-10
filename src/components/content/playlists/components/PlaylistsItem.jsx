@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import style from '../ContentPlaylists.module.scss'
-import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
+// import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
 
 export default function PlaylistsItem({ playlist }) {
     return (
@@ -11,7 +11,7 @@ export default function PlaylistsItem({ playlist }) {
             <div className={style.ContentPlaylists__Container__List__Item__Preview}>
                 <img
                     src={
-                        playlist.preview?.[0] || playlistDefaultPreviewImg
+                        playlist.preview?.[0] || '/assets/images/playlistDefaultPreview.jpeg'
                     }
                     alt="Изображение плейлиста"
                 />

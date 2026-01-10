@@ -1,9 +1,8 @@
 import style from './ContentListening.module.scss'
 import ListenMusicInfo from './components/ListenMusicInfo'
 import ListenOrder from './components/ListenOrder'
-
 import { useSearchParams } from "react-router"
-import { useMusic } from "../../../context/music-context"
+import { useMusic } from "@/context/music-context"
 import { useEffect } from "react"
 import { useNavigate } from 'react-router'
 import ListenError from './components/ListenError'

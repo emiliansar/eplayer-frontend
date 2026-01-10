@@ -1,18 +1,18 @@
 import { useQuery } from "@tanstack/react-query"
-import { musicService } from "../../../../services/music.service"
+import { musicService } from "@/services/music.service"
 import { useCallback, useEffect, useRef, useState } from "react"
 import style from '../appContent.module.scss'
-import { authorService } from "../../../../services/author.service"
-import audioDefaultpreview from '../../../../assets/images/audioDefaultpreview.jpeg'
-import playlistDefaultPreview from '../../../../assets/images/playlistDefaultPreview.jpeg'
+import { authorService } from "@/services/author.service"
+// import audioDefaultpreview from '../../../../assets/images/audioDefaultpreview.jpeg'
+// import playlistDefaultPreview from '../../../../assets/images/playlistDefaultPreview.jpeg'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import arrowBack from '../../../../assets/images/arrowBack.svg'
-import arrowForward from '../../../../assets/images/arrowForward.svg'
+// import arrowBack from '../../../../assets/images/arrowBack.svg'
+// import arrowForward from '../../../../assets/images/arrowForward.svg'
 import { Link } from "react-router"
-import { useMusic } from "../../../../context/music-context"
+// import { useMusic } from "../../../../context/music-context"
 import ContentTop from "./ContentTop"
 
 
@@ -441,7 +441,7 @@ export default function ContentNext({
                                             <div className={style.AppContent__Wrapper__Block__Audio__List__Item__Preview}>
                                                 <img
                                                     src={ item.preview ?
-                                                        `/api/images/${item.preview}` : audioDefaultpreview
+                                                        `/api/images/${item.preview}` : '/assets/images/audioDefaultpreview.jpeg'
                                                     }
                                                     alt={item.title}
                                                 />
@@ -479,7 +479,7 @@ export default function ContentNext({
                                         >
                                             <div className={style.AppContent__Wrapper__Block__Audio__List__Item__Preview}>
                                                 <img src={ item.preview ?
-                                                    `/api/images/${item.preview}` : audioDefaultpreview
+                                                    `/api/images/${item.preview}` : '/assets/images/audioDefaultpreview.jpeg'
                                                     }
                                                     alt={item.title}
                                                 />
@@ -515,7 +515,7 @@ export default function ContentNext({
                                             <div className={style.AppContent__Wrapper__Block__Audio__List__Item__Preview}>
                                                 <img
                                                     src={ item.preview ?
-                                                        `/api/images/${item.preview}` : audioDefaultpreview
+                                                        `/api/images/${item.preview}` : '/assets/images/audioDefaultpreview.jpeg'
                                                     }
                                                     alt={item.title}
                                                 />
@@ -551,7 +551,7 @@ export default function ContentNext({
                                             <div className={style.AppContent__Wrapper__Block__Audio__List__Item__Preview}>
                                                 <img
                                                     src={ item.preview ?
-                                                        `/api/images/${item.preview}` : audioDefaultpreview
+                                                        `/api/images/${item.preview}` : '/assets/images/audioDefaultpreview.jpeg'
                                                     }
                                                     alt={item.title}
                                                 />
@@ -590,14 +590,14 @@ export default function ContentNext({
                                         type="button"
                                         onClick={safesPLPrev}
                                     >
-                                        <img src={arrowBack} alt="Назад" />
+                                        <img src='/assets/images/arrowBack.svg' alt="Назад" />
                                     </button>
                                     <button
                                         className={`${style.AppContent__Wrapper__Block__Playlist__Top__Menu__Next}__${itemCount}`}
                                         type="button"
                                         onClick={safesPLNext}
                                     >
-                                        <img src={arrowForward} alt="Вперёд" />
+                                        <img src='/assets/images/arrowForward.svg' alt="Вперёд" />
                                     </button>
                                 </div>
                         </div>
@@ -631,7 +631,7 @@ export default function ContentNext({
                                             className={style.AppContent__Wrapper__Block__Playlist__List__Item}
                                         >
                                             <div className={style.AppContent__Wrapper__Block__Playlist__List__Item__Preview}>
-                                                <img src={playlist.preview || playlistDefaultPreview} alt={playlist.title} />
+                                                <img src={playlist.preview || '/assets/images/playlistDefaultPreview.jpeg'} alt={playlist.title} />
                                             </div>
                                             <div className={style.AppContent__Wrapper__Block__Playlist__List__Item__Text}>
                                                 <p className={style.AppContent__Wrapper__Block__Playlist__List__Item__Text__Name}>

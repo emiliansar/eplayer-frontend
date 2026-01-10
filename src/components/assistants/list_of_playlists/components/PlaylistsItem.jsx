@@ -1,4 +1,4 @@
-import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
+// import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
 import style from '../ListOfPlaylists.module.scss'
 
 export default function PlaylistsItem({ handleAddToPlaylist, item }) {
@@ -11,7 +11,7 @@ export default function PlaylistsItem({ handleAddToPlaylist, item }) {
                 className={style.ListOfPlaylists__List__Item__Btn__Preview}
             >
                 <img
-                    src={playlistDefaultPreviewImg}
+                    src='/assets/images/playlistDefaultPreview.jpeg'
                     alt="Превью плейлиста"
                 />
             </div>

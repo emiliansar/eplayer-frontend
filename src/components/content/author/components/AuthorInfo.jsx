@@ -1,6 +1,6 @@
 import style from '../ContentAuthor.module.scss'
-import userDefaultAvatarImg from '../../../../assets/images/userDefaultAvatar.svg'
-import { useAuthor } from '../../../../context/author-context'
+// import userDefaultAvatarImg from '../../../../assets/images/userDefaultAvatar.svg'
+import { useAuthor } from '@/context/author-context'
 
 export default function AuthorInfo() {
     const { author } = useAuthor()
@@ -12,7 +12,7 @@ export default function AuthorInfo() {
                     <div className={style.AuthorInfo__DescAcc}>
                         <div className={style.AuthorInfo__DescAcc__Preview}>
                             <img
-                                src={userDefaultAvatarImg}
+                                src='/assets/images/userDefaultAvatar.svg'
                                 alt="Аватар"
                             />
                         </div>

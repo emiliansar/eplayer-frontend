@@ -1,4 +1,4 @@
-import { musicService } from "../services/music.service";
+import { musicService } from "@/services/music.service";
 
 export const useAosQuery = (quantityTake, access_token, refresh_token, changeAccessToken) => {
   return {

@@ -1,6 +1,7 @@
-import CreatePlaylist from '../../create_playlist/CreatePlaylist'
+// import CreatePlaylist from '../../create_playlist/CreatePlaylist'
+import CreatePlaylist from '@/components/assistants/create_playlist/CreatePlaylist'
 import style from '../ListOfPlaylists.module.scss'
-import addImg from '../../../../assets/images/add.svg'
+// import addImg from '../../../../assets/images/add.svg'
 import { useMusic } from '../../../../context/music-context'
 
 export default function PlaylistBtnCreate({
@@ -22,7 +23,7 @@ export default function PlaylistBtnCreate({
                     style.ListOfPlaylists__List__Item__CreatePlaylist
                 }`}
             >
-                <img src={addImg} />
+                <img src='/assets/images/add.svg' />
                 <span>Новый</span>
             </button>
             <CreatePlaylist

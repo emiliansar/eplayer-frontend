@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import style from '../control.module.scss'
 import OrderMiniItem from './OrderMiniItem'
-import keyboardDoubleArrowDown from '../../../assets/images/keyboardDoubleArrowDown.svg'
-import keyboardDoubleArrowUp from '../../../assets/images/keyboardDoubleArrowUp.svg'
-import { useMusic } from '../../../context/music-context'
-import { useLocation } from 'react-router'
+// import keyboardDoubleArrowDown from '../../../assets/images/keyboardDoubleArrowDown.svg'
+// import keyboardDoubleArrowUp from '../../../assets/images/keyboardDoubleArrowUp.svg'
+import { useMusic } from '@/context/music-context'
+// import { useLocation } from 'react-router'
 export default function ListenOrderMini() {
     const { playlist } = useMusic()
     const [isOpen, setIsOpen] = useState(false)
@@ -28,8 +28,8 @@ export default function ListenOrderMini() {
                         >
                             <span>{ isOpen ? "Свернуть" : "Развернуть" }</span>
                             <img
-                                src={ isOpen ? keyboardDoubleArrowDown
-                                    : keyboardDoubleArrowUp
+                                src={ isOpen ? '/assets/images/keyboardDoubleArrowDown.svg'
+                                    : '/assets/images/keyboardDoubleArrowUp.svg'
                                 }
                             />
                         </button>

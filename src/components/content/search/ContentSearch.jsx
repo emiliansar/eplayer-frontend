@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query"
 import { useEffect, useState } from "react"
 import { Link, useSearchParams } from "react-router"
-import { searchService } from "../../../services/search.service"
+import { searchService } from "@/services/search.service"
 import style from './ContentSearch.module.scss'
-import { useEplayer } from "../../../context/eplayer-context"
+import { useEplayer } from "@/context/eplayer-context"
 import SearchItem from "./components/SearchItem"
 import SearchLoading from "./components/SearchLoading"
 import SearchNotFound from "./components/SearchNotFound"

@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query"
-import { musicService } from "../../../../services/music.service"
-import audioDefaultpreview from '../../../../assets/images/audioDefaultpreview.jpeg'
-import { authorService } from "../../../../services/author.service"
+import { musicService } from "@/services/music.service"
+// import audioDefaultpreview from '../../../../assets/images/audioDefaultpreview.jpeg'
+import { authorService } from "@/services/author.service"
 import { useEffect } from "react"
 import style from '../ContentListening.module.scss'
 import { Link } from "react-router"
-import { useMusic } from "../../../../context/music-context"
+import { useMusic } from "@/context/music-context"
 
 export default function OrderItem({ musicId }) {
 
@@ -63,7 +63,7 @@ export default function OrderItem({ musicId }) {
         <div className={style.orderItem}>
             <div className={style.orderItem__Preview}>
                 <img
-                    src={dataMusic.preview ? `/api/images/${dataMusic.preview}` : audioDefaultpreview}
+                    src={dataMusic.preview ? `/api/images/${dataMusic.preview}` : '/assets/images/audioDefaultpreview.jpeg'}
                     alt="Абложка"
                 />
                 { musicId === currentTrackId

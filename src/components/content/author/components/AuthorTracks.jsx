@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { useAuthor } from "../../../../context/author-context"
+import { useAuthor } from "@/context/author-context"
 import { useQuery } from "@tanstack/react-query";
-import { authorService } from "../../../../services/author.service";
+import { authorService } from "@/services/author.service";
 import style from '../ContentAuthor.module.scss'
 import TrackItem from "./TrackItem";
 import TrackNotFound from "./TrackNotFound";

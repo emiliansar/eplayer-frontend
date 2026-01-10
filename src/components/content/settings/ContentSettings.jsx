@@ -1,16 +1,16 @@
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { useEplayer } from '../../../context/eplayer-context'
-import PleaseAuth from '../../errors/PleaseAuth'
+import { useEplayer } from '@/context/eplayer-context'
+import PleaseAuth from '@/components/errors/PleaseAuth'
 import style from './contentSettings.module.scss'
-import { userService } from '../../../services/user.service'
+import { userService } from '@/services/user.service'
 import { useEffect, useRef, useState } from 'react'
-import { Spin } from 'antd'
-import { LoadingOutlined } from '@ant-design/icons'
-import userDefaultAvatar from '../../../assets/images/userDefaultAvatar.svg'
-import audioDefaultpreview from '../../../assets/images/audioDefaultpreview.jpeg'
+// import { Spin } from 'antd'
+// import { LoadingOutlined } from '@ant-design/icons'
+// import userDefaultAvatar from '../../../assets/images/userDefaultAvatar.svg'
+// import audioDefaultpreview from '../../../assets/images/audioDefaultpreview.jpeg'
 import { Button, message, Popover, Space } from 'antd';
-import { musicService } from '../../../services/music.service'
-import { useNavigate } from 'react-router'
+import { musicService } from '@/services/music.service'
+// import { useNavigate } from 'react-router'
 import SettingsLoading from './components/SettingsLoading'
 import SettingsError from './components/SettingsError'
 
@@ -193,7 +193,7 @@ export default function ContentSettings() {
                                         />
                                     ): (
                                         <img
-                                            src={userDefaultAvatar}
+                                            src='/assets/images/userDefaultAvatar.svg'
                                             alt="Изображение"
                                         />
                                     )}
@@ -271,7 +271,7 @@ export default function ContentSettings() {
                                             src={
                                                 music.preview ? 
                                                     `/api/music/preview/${music.preview}`
-                                                    : audioDefaultpreview
+                                                    : '/assets/images/audioDefaultpreview.jpeg'
                                                 }
                                                 alt="Изображение"
                                         />

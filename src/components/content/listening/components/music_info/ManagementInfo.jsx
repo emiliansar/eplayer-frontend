@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
-import { useMusic } from "../../../../../context/music-context"
-import { authorService } from "../../../../../services/author.service"
+import { useMusic } from "@/context/music-context"
+import { authorService } from "@/services/author.service"
 import { useEffect } from "react"
 import style from '../../ContentListening.module.scss'
 

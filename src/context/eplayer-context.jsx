@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { authService } from "../services/auth.service";
+import { authService } from "@/services/auth.service";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
 const EplayerContext = createContext({

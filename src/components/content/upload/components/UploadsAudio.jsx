@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react'
+// import { useRef, useState } from 'react'
 import style from '../contentFormUploads.module.scss'
-import uploadAudioFileImg from '../../../../assets/images/uploadAudioFile.svg'
-import uploadFileImg from '../../../../assets/images/uploadFile.svg'
+// import uploadAudioFileImg from '../../../../assets/images/uploadAudioFile.svg'
+// import uploadFileImg from '../../../../assets/images/uploadFile.svg'
 
 export default function UploadsAudio({
     audioFile,
@@ -73,12 +73,12 @@ export default function UploadsAudio({
             >
                 { audioFile ? (
                     <>
-                        <img src={uploadAudioFileImg} />
+                        <img src='/assets/images/uploadAudioFile.svg' />
                         <p>{audioFile.name}</p>
                     </>
                 ): (
                     <>
-                        <img src={uploadFileImg} />
+                        <img src='/assets/images/uploadFile.svg' />
                         <p>Нажмите чтобы выбрать или перетащите файл</p>
                     </>
                 )}

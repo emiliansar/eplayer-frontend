@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { createContext, useContext, useEffect, useState } from "react";
-import { authorService } from "../services/author.service";
+import { authorService } from "@/services/author.service";
 
 const AuthorContext = createContext()
 

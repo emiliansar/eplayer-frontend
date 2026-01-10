@@ -1,9 +1,9 @@
 import style from '../ContentPlaylists.module.scss'
-import addImg from '../../../../assets/images/add.svg'
+// import addImg from '../../../../assets/images/add.svg'
 import { useState } from 'react';
-import CreatePlaylist from '../../../assistants/create_playlist/CreatePlaylist';
-import { ConfigProvider, Modal } from 'antd';
-import CreatePlaylistForm from '../../../assistants/create_playlist/CreatePlaylistForm';
+import CreatePlaylist from '@/components/assistants/create_playlist/CreatePlaylist';
+// import { ConfigProvider, Modal } from 'antd';
+// import CreatePlaylistForm from '../../../assistants/create_playlist/CreatePlaylistForm';
 
 export default function PlaylistNew() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +24,7 @@ export default function PlaylistNew() {
                 <div className={style.CreatePlaylist__Content}>
                     <div className={style.CreatePlaylist__Content__Circle}>
                         <img
-                            src={addImg}
+                            src='/assets/images/add.svg'
                             className={style.CreatePlaylist__Content__Circle__Img}
                         />
                     </div>

@@ -1,6 +1,4 @@
 import style from '../appContent.module.scss'
-import arrowBackImg from '../../../../assets/images/arrowBack.svg'
-import arrowForwardImg from '../../../../assets/images/arrowForward.svg'
 
 export default function ContentTop({
     safesSlidePrev,
@@ -18,14 +16,14 @@ export default function ContentTop({
                     type="button"
                     onClick={safesSlidePrev}
                 >
-                    <img src={arrowBackImg} alt="Назад" />
+                    <img src='/assets/images/arrowBack.svg' alt="Назад" />
                 </button>
                 <button
                     className={`${style.AppContent__Wrapper__Block__Audio__Top__Menu__Next}__${itemCount}`}
                     type="button"
                     onClick={safesSlideNext}
                 >
-                    <img src={arrowForwardImg} alt="Вперёд" />
+                    <img src='/assets/images/arrowForward.svg' alt="Вперёд" />
                 </button>
             </div>
         </div>

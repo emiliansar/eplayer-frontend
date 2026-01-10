@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query"
-import { musicService } from "../../../services/music.service"
-import { Spin } from "antd"
-import { LoadingOutlined } from "@ant-design/icons"
+import { musicService } from "@/services/music.service"
+// import { Spin } from "antd"
+// import { LoadingOutlined } from "@ant-design/icons"
 import style from './contentHistory.module.scss'
-import audioDefaultPreview from '../../../assets/images/audioDefaultPreview.jpeg'
-import { useEffect } from "react"
+// import audioDefaultPreview from '../../../assets/images/audioDefaultPreview.jpeg'
+// import { useEffect } from "react"
 import { Link } from "react-router"
 import HistoryLoading from "./components/HistoryLoading"
-import { authorService } from "../../../services/author.service"
-import { someService } from "../../../services/some.service"
+import { authorService } from "@/services/author.service"
+import { someService } from "@/services/some.service"
 
 export default function HistoryItem({ story }) {
     // console.log("HistoryItem story: ", story)
@@ -55,7 +55,7 @@ export default function HistoryItem({ story }) {
                 className={style.ContentHistory__Container__List__Item__Preview}
             >
                 <img
-                    src={data.preview ? `/api/images/${ data.preview }` : audioDefaultPreview}
+                    src={data.preview ? `/api/images/${ data.preview }` : '/assets/images/audioDefaultPreview.jpeg'}
                     alt="Обложка"
                 />
             </Link>

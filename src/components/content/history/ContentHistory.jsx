@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
-import { useEplayer } from "../../../context/eplayer-context"
-import PleaseAuth from "../../errors/PleaseAuth"
+import { useEplayer } from "@/context/eplayer-context"
+import PleaseAuth from "@/components/errors/PleaseAuth"
 import { useQuery } from "@tanstack/react-query"
-import { userService } from "../../../services/user.service"
-import { LoadingOutlined } from '@ant-design/icons';
-import { Spin } from 'antd';
+import { userService } from "@/services/user.service"
+// import { LoadingOutlined } from '@ant-design/icons';
+// import { Spin } from 'antd';
 import style from './contentHistory.module.scss'
 import HistoryItem from "./HistoryItem"
 import HistoryLoading from "./components/HistoryLoading"

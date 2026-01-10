@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 import { useEffect } from "react"
 import style from '../control.module.scss'
-import audioDefaultpreview from '../../../assets/images/audioDefaultpreview.jpeg'
-import { useMusic } from "../../../context/music-context"
-import { musicService } from "../../../services/music.service"
-import { authorService } from "../../../services/author.service"
+// import audioDefaultpreview from '../../../assets/images/audioDefaultpreview.jpeg'
+import { useMusic } from "@/context/music-context"
+import { musicService } from "@/services/music.service"
+import { authorService } from "@/services/author.service"
 
 export default function OrderMiniItem({ musicId }) {
 
@@ -65,7 +65,7 @@ export default function OrderMiniItem({ musicId }) {
         >
             <div className={style.OrderMiniItem__Preview}>
                 <img
-                    src={dataMusic.preview ? `/api/images/${dataMusic.preview}` : audioDefaultpreview}
+                    src={dataMusic.preview ? `/api/images/${dataMusic.preview}` : '/assets/images/audioDefaultpreview.jpeg'}
                     alt="Абложка"
                     style={{
                         width: 50

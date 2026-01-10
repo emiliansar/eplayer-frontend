@@ -1,6 +1,6 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
-import style from '../ContentPlaylists.module.scss'
+// import style from '../ContentPlaylists.module.scss'
 
 export default function PlaylistLoading() {
     return (

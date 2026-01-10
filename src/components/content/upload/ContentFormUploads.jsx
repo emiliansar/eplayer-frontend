@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react'
-import { useEplayer } from '../../../context/eplayer-context'
-import PleaseAuth from '../../errors/PleaseAuth'
+import { useEplayer } from '@/context/eplayer-context'
+import PleaseAuth from '@/components/errors/PleaseAuth'
 import style from './contentFormUploads.module.scss'
 import { useMutation } from '@tanstack/react-query'
-import { musicService } from '../../../services/music.service'
+import { musicService } from '@/services/music.service'
 import { message } from 'antd';
 import UploadsPreview from './components/UploadsPreview'
 import UploadsName from './components/UploadsName'
