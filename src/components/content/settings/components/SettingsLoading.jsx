@@ -1,5 +1,5 @@
 import { Spin } from 'antd'
-import style from '../ContentSettings.module.scss'
+import style from '../contentSettings.module.scss'
 import { LoadingOutlined } from '@ant-design/icons'
 
 export default function SettingsLoading() {

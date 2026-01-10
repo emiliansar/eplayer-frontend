@@ -1,4 +1,4 @@
-import style from '../ContentPlaylists.module.scss'
+import style from '../contentPlaylists.module.scss'
 // import addImg from '../../../../assets/images/add.svg'
 import { useState } from 'react';
 import CreatePlaylist from '@/components/assistants/create_playlist/CreatePlaylist';

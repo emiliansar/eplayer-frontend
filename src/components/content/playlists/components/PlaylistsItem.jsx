@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import style from '../ContentPlaylists.module.scss'
+import style from '../contentPlaylists.module.scss'
 // import playlistDefaultPreviewImg from '../../../../assets/images/playlistDefaultPreview.jpeg'
 
 export default function PlaylistsItem({ playlist }) {
