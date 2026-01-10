@@ -10,7 +10,7 @@ RUN yarn install --frozen-lockfile
 
 # Копируем исходный код и собираем
 RUN ls -la /app/
-RUN ls -la /app/assets/images/
+RUN ls -la /app/public/assets/images/
 RUN ls -la /app/src/components/content/history/
 RUN yarn build
 
