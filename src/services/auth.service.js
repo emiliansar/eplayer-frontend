@@ -5,7 +5,7 @@ axios.defaults.withCredentials = true;
 class AuthService {
     async register(dto) {
         try {
-            const {data} = await axios.post('http://localhost:3000/auth/register', dto);
+            const {data} = await axios.post('/api/auth/register', dto);
             return data;
         } catch (error) {
             throw error;
