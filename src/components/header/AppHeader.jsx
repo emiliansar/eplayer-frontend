@@ -31,7 +31,7 @@ export default function AppHeader() {
     })
     const navigate = useNavigate()
     const location = useLocation()
-    const [isAvatarMenu, setIsAavatarMenu] = useState(false)
+    const [isAvatarMenu, setIsAvatarMenu] = useState(false)
     const inputRef = useRef(null)
 
     useEffect(() => {
@@ -45,7 +45,7 @@ export default function AppHeader() {
         changeUserId(null)
         changeAccessToken('')
         changeRefreshToken('')
-        setIsAavatarMenu(false)
+        setIsAvatarMenu(false)
         navigate('/')
     }
 
@@ -103,11 +103,11 @@ export default function AppHeader() {
                     { isAuth ? (
                         <div className={style.AppHeader__Container__Avatar}>
                             <img src={
-                                    data.avatar || '/assets/images/userDefaultAvatar.svg'
+                                    data?.avatar ? data?.avatar : '/assets/images/userDefaultAvatar.svg'
                                 }
                                 alt="Аватарка"
                                 className={style.AppHeader__Container__Avatar__Img}
-                                onClick={() => setIsAavatarMenu(!isAvatarMenu)}
+                                onClick={() => setIsAvatarMenu(!isAvatarMenu)}
                             />
 
                             { isAvatarMenu && (
