@@ -89,9 +89,10 @@ export default function PopoverMusic({ musicId }) {
 
     const handleShare = async () => {
         try {
-            await navigator.clipboard.writeText(`http://localhost:5173/listen?m=${musicId}`);
+            await navigator.clipboard.writeText(`http://eplayer-music.ru/listen?m=${musicId}`);
             success('Текст скопирован в буфер обмена');
         } catch (err) {
+            console.log(err)
             error('Ошибка при копировании: ', err);
         }
     }
