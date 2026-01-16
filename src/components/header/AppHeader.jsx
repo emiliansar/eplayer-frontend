@@ -76,7 +76,7 @@ export default function AppHeader() {
                             className={style.AppHeader__Container__Logo__Link}
                         >
                             <img src='/assets/images/logo.svg' alt="Лого" />
-                            <span>Эмиль Плейер</span>
+                            <span>Soundfy</span>
                         </Link>
                     </div>
 
