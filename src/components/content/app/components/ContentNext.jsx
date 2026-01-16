@@ -273,14 +273,14 @@ export default function ContentNext({
             || dataTakeFromA?.audioList.length === 0
             || !dataTakeFromP
             || dataTakeFromP?.playlistList.length === 0
-        ) return;
-
-        if (
-            !dataTakeFromA
-            || dataTakeFromA?.audioList.length < 16
-            || !dataTakeFromP
-            || dataTakeFromP?.playlistList.length < 8
         ) return setHasMore(false);
+
+        // if (
+        //     !dataTakeFromA
+        //     || dataTakeFromA?.audioList.length < 16
+        //     || !dataTakeFromP
+        //     || dataTakeFromP?.playlistList.length < 8
+        // ) return setHasMore(false);
 
         setTfaList(dataTakeFromA.audioList)
         setTfpList(dataTakeFromP.playlistList)
