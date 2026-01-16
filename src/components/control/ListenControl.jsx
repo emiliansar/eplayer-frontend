@@ -81,19 +81,31 @@ export default function ListenControl() {
         const currentIndex = musicList.findIndex(item => item === currentTrackId)
         const nextItem = musicList[currentIndex + 1]
 
-        if ((currentIndex+1) === musicList.length && replay === 'replay-playlist') {
+        if (replay === 'off') {
+            if ((currentIndex+1) === musicList.length) {
+                return audioRef.current.pause()
+            }
+
+            return changeCurrentTrackId(nextItem)
+        }
+
+        if (
+            (currentIndex + 1) === musicList.length
+            && replay === 'replay-playlist'
+        ) {
             return changeCurrentTrackId(musicList[0])
         }
 
         if (replay === 'replay-one') {
-            audioRef.current.currentTime = 0
-            audioRef.current.play()
-            return
+            return () => {
+                audioRef.current.currentTime = 0
+                audioRef.current.play()
+            }
         }
 
         if ( replay === 'end-after-one' || !nextItem)
         {
-            return
+            return audioRef.current.pause()
         }
 
         // navigate(`/listen?m=${nextItem}&p=${currentPlaylistId}`)
