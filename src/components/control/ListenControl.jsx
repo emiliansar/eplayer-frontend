@@ -83,17 +83,18 @@ export default function ListenControl() {
 
         if (replay === 'off') {
             if ((currentIndex+1) === musicList.length) {
-                return audioRef.current.pause()
+                return
             }
 
             return changeCurrentTrackId(nextItem)
         }
 
-        if (
-            (currentIndex + 1) === musicList.length
-            && replay === 'replay-playlist'
-        ) {
-            return changeCurrentTrackId(musicList[0])
+        if (replay === 'replay-playlist') {
+            if ((currentIndex + 1) === musicList.length) {
+                return changeCurrentTrackId(musicList[0])
+            }
+
+            return changeCurrentTrackId(nextItem)
         }
 
         if (replay === 'replay-one') {
@@ -105,10 +106,11 @@ export default function ListenControl() {
 
         if ( replay === 'end-after-one' || !nextItem)
         {
-            return audioRef.current.pause()
+            return
         }
 
         // navigate(`/listen?m=${nextItem}&p=${currentPlaylistId}`)
+        console.log('Replay-решение не было найдено')
         changeCurrentTrackId(nextItem)
     }, [pause, playlist, currentTrackId, currentPlaylistId, replay])
 
